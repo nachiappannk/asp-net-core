@@ -2,4 +2,6 @@
 
  - Read a query string and return that as output 
  - Read a path variable and return that as output
- - 
+ - Read the body as a string and return that as output
+ - Read the body `{"name" : "value" }` and return the value of name property
+ - Return the method as a output
