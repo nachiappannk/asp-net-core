@@ -12,9 +12,9 @@ namespace LearningAspNetCore.Controllers
     public class LearningController : ControllerBase
     {
         [HttpGet]
-        public string Get()
+        public string Get([FromQuery(Name = "name")]string valueOfName)
         {
-            return "hi";
+            return valueOfName;
         }
     }
 }

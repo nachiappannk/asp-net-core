@@ -1,0 +1,2 @@
+curl --location --request GET 'https://localhost:5001/api/learning-controller?name=nash' \
+--header 'accept: text/plain'
