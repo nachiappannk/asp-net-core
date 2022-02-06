@@ -5,3 +5,5 @@
  - Read the body as a string and return that as output
  - Read the body `{"name" : "value" }` and return the value of name property
  - Return the method as a output
+ - Read the value of the header "x-custom-header" and return that as output
+ 
