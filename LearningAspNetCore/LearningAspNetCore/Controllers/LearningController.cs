@@ -16,5 +16,17 @@ namespace LearningAspNetCore.Controllers
         {
             return "hi";
         }
+
+        [HttpPost]
+        [Route("/api/learning-controller/ReadStringDataManual")]
+        public string GetValue([FromBody] Model model)
+        {
+            return model.WellIdentifier;
+        }
+
     }
+
+
+
+
 }
