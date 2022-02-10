@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,15 @@ namespace LearningAspNetCore.Controllers
                 requestHeaders.Add(header.Key, header.Value);
             }
             return requestHeaders;
+        }
+
+        [HttpGet("GetMessage")]
+        public ActionResult GetMessage([FromHeader] Author author)
+        {
+            string message = $"The author details are:-\nId : {author.Id}, " +
+                                         $"FirstName : {author.FirstName}, " +
+                                          $"LastName : {author.LastName}";
+            return Ok(message);
         }
 
 
