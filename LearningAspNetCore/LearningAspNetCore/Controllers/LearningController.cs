@@ -16,5 +16,20 @@ namespace LearningAspNetCore.Controllers
         {
             return "hi";
         }
+
+
+        [HttpGet("GetAllHeaders")]
+        public ActionResult<Dictionary<string, string>> GetAllHeaders()
+        {
+            Dictionary<string, string> requestHeaders =
+               new Dictionary<string, string>();
+            foreach (var header in Request.Headers)
+            {
+                requestHeaders.Add(header.Key, header.Value);
+            }
+            return requestHeaders;
+        }
+
+
     }
 }
