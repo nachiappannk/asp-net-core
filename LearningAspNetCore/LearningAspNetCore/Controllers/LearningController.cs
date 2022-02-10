@@ -16,5 +16,15 @@ namespace LearningAspNetCore.Controllers
         {
             return "hi";
         }
+
+
+        [HttpPost]
+        [Route("/api/learning-controller/bodystring")]
+        public string JsonStringBody([FromBody] string content)
+        {
+            return content;
+        }
+
+
     }
 }
