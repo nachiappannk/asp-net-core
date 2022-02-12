@@ -16,5 +16,15 @@ namespace LearningAspNetCore.Controllers
         {
             return "hi";
         }
+
+
+        [HttpPost]
+        [Route("users/{email}/photos")]
+        public ActionResult Upload([FromRoute] string email)
+        {
+            string message = $"Hi, {email}";
+            return Ok(message);
+
+        }
     }
 }
